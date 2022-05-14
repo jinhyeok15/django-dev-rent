@@ -1,0 +1,25 @@
+{% extends './base.html' %}
+{% load static %}
+<!-- page_list.html -->
+{% block title %}리스트{% endblock title %}
+
+{% block content %}
+    <ul>
+        {% for obj in object_list %}
+        <!-- 하나의 글은 여기서부터 -->
+        <li>
+            <h2>{{obj.title}}</h2>
+            <div class="score">
+                <span>감정점수: {{obj.score}}점</span>
+            </div>
+            <div class="date">
+                <span>{{obj.dt_created|date:"d"}}, {{obj.dt_created|date:"M"}}</span>
+            </div>
+            <a href="{% url 'page-detail' obj.id %}">자세히 보기</a>
+        </li>
+            <!-- 여기까지 반복됩니다. -->
+            {% endfor %}
+    </ul>
+
+    <a href="{% url 'page-create' %}">만들기</a>
+{% endblock content %}
