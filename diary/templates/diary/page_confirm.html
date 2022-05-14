@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block content %}
-    <form method='post'>{% csrf_token %}
+    <form method='post'>
+        {% csrf_token %}
         <ul>
             <li><input type="submit" value="지우기"></li>
             <li><a href="{% url 'page-detail' object.id%}">남기기</a></li> 

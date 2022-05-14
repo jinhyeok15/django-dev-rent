@@ -3,23 +3,25 @@
 
 {% block content %}
     <!-- page_detail.html -->
-    <div class="notetext">
-        <div class="text-box">
-            <h2>{{object_detail.title}}</h2>
-            <div class="date">
-                <span>{{object_detail.dt_created|date:'d'}}</span>
-                <div class="month-year">
-                    <p class="month">{{object_detail.dt_created|date:"M"}}</p>
-                    <p class="year">{{object_detail.dt_created|date:"Y"}}</p>
+    <div class="detail-box">
+        <div class="text-header">
+            <div class="detail-title">
+                <h2>{{object_detail.title}}</h2>
+                <div class="date">
+                    <div class="month-year">
+                        <p>{{object_detail.dt_created|date:'d'}} {{object_detail.dt_created|date:"M"}}, {{object_detail.dt_created|date:"Y"}}</p>
+                    </div>
                 </div>
             </div>
-            <div class="detail">{{object_detail.content|linebreaksbr}}</div>
             <div class="notetext-btn">
                 <ul>
                     <li><a href="{% url 'page-delete' object_detail.id%}">삭제하기</a></li>
                     <li><a href="{% url 'page-update' object_detail.id %}">수정하기</a></li>
                 </ul>
             </div>
+        </div>
+        <div class="text-box">
+            <div class="detail">{{object_detail.content|linebreaksbr}}</div>
         </div>
     </div>
 {% endblock content %}

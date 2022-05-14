@@ -14,13 +14,11 @@
 }
 
 .element {
-    position: relative;
     margin-left: -1.5%;
     width: 100%;
     border-bottom: solid 1px;
 }
 
 .element-content {
-    position: inherit;
-    left: 10%;
+    position: relative;
 }

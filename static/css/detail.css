@@ -1,0 +1,41 @@
+.detail-box {
+    height: 100%;
+    width: 100%;
+}
+.text-header {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 2px;
+}
+
+.detail-title {
+    margin-left: 20px;
+}
+
+.text-box {
+    position: relative;
+    margin-left: 50px;
+    top: 50px;
+}
+
+.month-year {
+    font-size: 12px;
+}
+
+.notetext-btn {
+    position: absolute;
+    right: 20px;
+}
+
+.notetext-btn ul {
+    margin-left: -15px;
+}
+
+.notetext-btn ul li{
+    float: left;
+    margin-right: 20px;
+}
+
+.notetext-btn ul li a {
+    color: black;
+}
