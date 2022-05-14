@@ -1,1 +1,1 @@
-# django-project-2-diary
+# 장고 과제입니다

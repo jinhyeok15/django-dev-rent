@@ -1,7 +1,5 @@
-{% extends './base.html' %}
+{% extends 'base.html' %}
 {% load static %}
-<!-- page_list.html -->
-{% block title %}리스트{% endblock title %}
 
 {% block content %}
     <ul>
@@ -9,9 +7,6 @@
         <!-- 하나의 글은 여기서부터 -->
         <li>
             <h2>{{obj.title}}</h2>
-            <div class="score">
-                <span>감정점수: {{obj.score}}점</span>
-            </div>
             <div class="date">
                 <span>{{obj.dt_created|date:"d"}}, {{obj.dt_created|date:"M"}}</span>
             </div>
