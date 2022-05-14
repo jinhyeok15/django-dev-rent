@@ -7,12 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>블로그</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
 </head>
 <header>
-    <h2>블로그</h2>
-    <a href="{% url 'page-list' %}">홈</a>
+    <h2> <a href="{% url 'page-list' %}" class="home-button">블로그</a></h2>
+    <nav>
+        <a href="{% url 'page-list' %}" class="home-button">홈 바로가기</a>
+    </nav>
 </header>
 <body>
-    {% block content %}{% endblock content %}
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
 </body>
 </html>
