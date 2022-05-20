@@ -6,11 +6,11 @@ from .models import Page
 
 def page_list(request):
     object_list = Page.objects.all()
-    return render(request, 'diary/page_list.html', {'object_list': object_list})
+    return render(request, 'blog/page_list.html', {'object_list': object_list})
 
 def page_detail(request, page_id):
     object_detail = Page.objects.get(id=page_id)
-    return render(request, 'diary/page_detail.html', {'object_detail': object_detail})
+    return render(request, 'blog/page_detail.html', {'object_detail': object_detail})
 
 def page_create(request):
     if request.method == 'POST': 
@@ -20,7 +20,7 @@ def page_create(request):
             return redirect('page-list')
     else:
         form = PageForm()
-    return render(request, 'diary/page_create.html', {'form':form})
+    return render(request, 'blog/page_create.html', {'form':form})
 
 def page_update(request, page_id):
     update = Page.objects.get(id=page_id)
@@ -31,7 +31,7 @@ def page_update(request, page_id):
             return redirect('page-detail', page_id=update.id)
     else:
         form = PageForm(instance= update)
-    return render(request, 'diary/page_create.html', {'form':form})
+    return render(request, 'blog/page_create.html', {'form':form})
 
 def page_delete(request, page_id):
     object = Page.objects.get(id=page_id)
@@ -40,4 +40,4 @@ def page_delete(request, page_id):
         object.delete()
         return redirect('page-list')
     else:
-        return render(request, 'diary/page_confirm.html', {'object' : object})
+        return render(request, 'blog/page_confirm.html', {'object' : object})
