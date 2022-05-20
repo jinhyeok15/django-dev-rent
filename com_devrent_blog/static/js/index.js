@@ -3,7 +3,7 @@ const deleteSubmitForm = document.getElementById('delete-page-form');
 function deleteSubmitEvent(event) {
   event.preventDefault();
   const answer = confirm("삭제하시겠습니까?");
-  console.log(answer);
+  
   if (answer === true) {
     deleteSubmitForm.submit();
   }
