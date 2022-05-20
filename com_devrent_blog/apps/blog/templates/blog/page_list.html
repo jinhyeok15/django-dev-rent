@@ -2,20 +2,20 @@
 {% load static %}
 
 {% block content %}
-    <div class="list">
-        <a href="{% url 'page-create' %}" class="make-element">만들기</a>
-    </div>
-    <ul>
-        {% for obj in object_list %}
-        <div class="element">
-            <li class="element-content">
-                <h2>{{obj.title}}</h2>
-                <div class="date">
-                    <span>{{obj.dt_created|date:"d"}}, {{obj.dt_created|date:"M"}}</span>
-                </div>
-                <a href="{% url 'page-detail' obj.id %}">자세히 보기</a>
-            </li>
+  <div class="list">
+    <a href="{% url 'page-create' %}" class="make-element">만들기</a>
+  </div>
+  <ul>
+    {% for obj in object_list %}
+    <div class="element">
+      <li class="element-content">
+        <h2>{{obj.title}}</h2>
+        <div class="date">
+          <span>{{obj.dt_created|date:"d"}}, {{obj.dt_created|date:"M"}}</span>
         </div>
-        {% endfor %}
-    </ul>
+        <a href="{% url 'page-detail' obj.id %}">자세히 보기</a>
+      </li>
+    </div>
+    {% endfor %}
+  </ul>
 {% endblock content %}

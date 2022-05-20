@@ -2,31 +2,32 @@
 {% load static %}
 
 {% block content %}
-    <!-- page_detail.html -->
-    <div class="detail-box">
-        <div class="text-header">
-            <div class="detail-title">
-                <h2>{{object_detail.title}}</h2>
-                <div class="date">
-                    <div class="month-year">
-                        <p>{{object_detail.dt_created|date:'d'}} {{object_detail.dt_created|date:"M"}}, {{object_detail.dt_created|date:"Y"}}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="notetext-btn">
-                <ul>
-                    <li>
-                        <form method='post' action="{% url 'page-delete' object_detail.id %}" id="delete-page-form">
-                            {% csrf_token %}
-                            <input type="submit" value="삭제하기" class="delete-button">
-                        </form>
-                    </li>
-                    <li><a href="{% url 'page-update' object_detail.id %}">수정하기</a></li>
-                </ul>
-            </div>
+  <!-- page_detail.html -->
+  <div class="detail-box">
+    <div class="text-header">
+      <div class="detail-title">
+        <h2>{{object_detail.title}}</h2>
+        <div class="date">
+          <div class="month-year">
+            <p>{{object_detail.dt_created|date:'d'}} {{object_detail.dt_created|date:"M"}},
+              {{object_detail.dt_created|date:"Y"}}</p>
+          </div>
         </div>
-        <div class="text-box">
-            <div class="detail">{{object_detail.content|linebreaksbr}}</div>
-        </div>
+      </div>
+      <div class="notetext-btn">
+        <ul>
+          <li>
+            <form method='post' action="{% url 'page-delete' object_detail.id %}" id="delete-page-form">
+              {% csrf_token %}
+              <input type="submit" value="삭제하기" class="delete-button">
+            </form>
+          </li>
+          <li><a href="{% url 'page-update' object_detail.id %}">수정하기</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="text-box">
+      <div class="detail">{{object_detail.content|linebreaksbr}}</div>
+    </div>
+  </div>
 {% endblock content %}

@@ -1,49 +1,50 @@
 .detail-box {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
+
 .text-header {
-    display: flex;
-    align-items: center;
-    border-bottom: solid 2px;
+  display: flex;
+  align-items: center;
+  border-bottom: solid 2px;
 }
 
 .delete-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    text-decoration: underline;
-    font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 16px;
 }
 
 .detail-title {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .text-box {
-    position: relative;
-    margin-left: 50px;
-    top: 50px;
+  position: relative;
+  margin-left: 50px;
+  top: 50px;
 }
 
 .month-year {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .notetext-btn {
-    position: absolute;
-    right: 20px;
+  position: absolute;
+  right: 20px;
 }
 
 .notetext-btn ul {
-    margin-left: -15px;
+  margin-left: -15px;
 }
 
-.notetext-btn ul li{
-    float: left;
-    margin-right: 20px;
+.notetext-btn ul li {
+  float: left;
+  margin-right: 20px;
 }
 
 .notetext-btn ul li a {
-    color: black;
+  color: black;
 }
