@@ -16,7 +16,7 @@
             <div class="notetext-btn">
                 <ul>
                     <li>
-                        <form method='post' id="delete-page-form">
+                        <form method='post' action="{% url 'page-delete' object_detail.id %}" id="delete-page-form">
                             {% csrf_token %}
                             <input type="submit" value="삭제하기" class="delete-button">
                         </form>
