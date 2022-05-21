@@ -2,7 +2,7 @@ from django.urls import path, include
 from . import views
 from .apps import BlogConfig
 
-app_name = BlogConfig.name
+app_name = BlogConfig.app_name
 
 
 urlpatterns = [

@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 from .apps import AccountConfig
 
-app_name = AccountConfig.name
+app_name = AccountConfig.app_name
 
 
 urlpatterns = [
