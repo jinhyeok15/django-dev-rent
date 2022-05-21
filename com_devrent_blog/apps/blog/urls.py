@@ -1,9 +1,12 @@
 from django.urls import path, include
 from . import views
+from .apps import BlogConfig
+
+app_name = BlogConfig.name
 
 
 urlpatterns = [
-    path('', views.page_list, name = 'page-list'),
+    path('', views.page_list, name='page-list'),
     # path('diafy/info/', views.info, name='info),
     path('write/', views.page_create, name='page-create'),
     path('page/<int:page_id>/', views.page_detail, name="page-detail"),

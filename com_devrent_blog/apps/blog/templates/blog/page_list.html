@@ -3,7 +3,7 @@
 
 {% block content %}
   <div class="list">
-    <a href="{% url 'page-create' %}" class="make-element">만들기</a>
+    <a href="{% url 'blog:page-create' %}" class="make-element">만들기</a>
   </div>
   <ul>
     {% for obj in object_list %}
@@ -13,7 +13,7 @@
         <div class="date">
           <span>{{obj.dt_created|date:"d"}}, {{obj.dt_created|date:"M"}}</span>
         </div>
-        <a href="{% url 'page-detail' obj.id %}">자세히 보기</a>
+        <a href="{% url 'blog:page-detail' obj.id %}">자세히 보기</a>
       </li>
     </div>
     {% endfor %}

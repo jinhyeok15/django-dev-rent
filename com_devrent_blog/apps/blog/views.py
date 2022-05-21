@@ -17,7 +17,7 @@ def page_create(request):
         form = PageForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('page-list')
+            return redirect('blog:page-list')
     else:
         form = PageForm()
     return render(request, 'blog/page_create.html', {'form':form})
@@ -28,7 +28,7 @@ def page_update(request, page_id):
         form = PageForm(request.POST, instance=update)
         if form.is_valid():
             form.save()
-            return redirect('page-detail', page_id=update.id)
+            return redirect('blog:page-detail', page_id=update.id)
     else:
         form = PageForm(instance= update)
     return render(request, 'blog/page_create.html', {'form':form})
@@ -38,6 +38,6 @@ def page_delete(request, page_id):
     
     if request.method == 'POST':
         object.delete()
-        return redirect('page-list')
+        return redirect('blog:page-list')
     else:
         return render(request, 'blog/page_confirm.html', {'object' : object})

@@ -11,9 +11,12 @@
     <link rel="stylesheet" href="{% static 'css/detail.css' %}">
 </head>
 <header>
-    <h2> <a href="{% url 'page-list' %}" class="home-button">블로그</a></h2>
+    <h2> <a href="{% url 'blog:page-list' %}" class="home-button">블로그</a></h2>
     <nav>
-        <a href="{% url 'page-list' %}" class="home-button">홈 바로가기</a>
+        <ul>
+            <li><a href="{% url 'blog:page-list' %}" class="home-button">홈 바로가기</a></li>
+            <li><a href="{% url 'account:login' %}" class="home-button">로그인 바로가기</a></li>
+        </ul>
     </nav>
 </header>
 <body>
