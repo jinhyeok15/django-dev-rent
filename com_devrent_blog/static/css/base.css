@@ -38,6 +38,7 @@ nav {
 nav ul li { 
   float: left;
   margin-right: 10px;
+  text-decoration: underline;
 }
 
 main {
@@ -52,7 +53,7 @@ main {
   border: solid 1px;
 }
 
-.home-button {
+.header-button {
   position: relative;
   color: black;
   text-decoration: none;
